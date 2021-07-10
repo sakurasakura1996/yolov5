@@ -1,5 +1,5 @@
 # Repo-specific DockerIgnore -------------------------------------------------------------------------------------------
-# .git
+#.git
 .cache
 .idea
 runs
@@ -12,10 +12,12 @@ data/samples/*
 *.jpg
 
 # Neural Network weights -----------------------------------------------------------------------------------------------
-**/*.weights
 **/*.pt
+**/*.pth
 **/*.onnx
 **/*.mlmodel
+**/*.torchscript
+**/*.torchscript.pt
 
 
 # Below Copied From .gitignore -----------------------------------------------------------------------------------------
@@ -47,6 +49,7 @@ sdist/
 var/
 wheels/
 *.egg-info/
+wandb/
 .installed.cfg
 *.egg
 
@@ -108,9 +111,9 @@ celerybeat-schedule
 .env
 
 # virtualenv
-.venv
-venv/
-ENV/
+.venv*
+venv*/
+ENV*/
 
 # Spyder project settings
 .spyderproject

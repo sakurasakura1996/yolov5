@@ -1,22 +1,31 @@
-# pip install -U -r requirements.txt
-numpy==1.17
-opencv-python
-torch >= 1.5
-matplotlib
-pycocotools
-tqdm
-pillow
-tensorboard
-pyyaml
+# pip install -r requirements.txt
 
+# base ----------------------------------------
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.2
+Pillow
+PyYAML>=5.3.1
+scipy>=1.4.1
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.41.0
 
-# Nvidia Apex (optional) for mixed precision training --------------------------
-# git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" . --user && cd .. && rm -rf apex
+# logging -------------------------------------
+tensorboard>=2.4.1
+# wandb
 
-# Conda commands (in place of pip) ---------------------------------------------
-# conda update -yn base -c defaults conda
-# conda install -yc anaconda numpy opencv matplotlib tqdm pillow ipython
-# conda install -yc conda-forge scikit-image pycocotools tensorboard
-# conda install -yc spyder-ide spyder-line-profiler
-# conda install -yc pytorch pytorch torchvision
-# conda install -yc conda-forge protobuf numpy && pip install onnx  # https://github.com/onnx/onnx#linux-and-macos
+# plotting ------------------------------------
+seaborn>=0.11.0
+pandas
+
+# export --------------------------------------
+# coremltools>=4.1
+# onnx>=1.9.0
+# scikit-learn==0.19.2  # for coreml quantization
+
+# extras --------------------------------------
+# Cython  # for pycocotools https://github.com/cocodataset/cocoapi/issues/172
+# pycocotools>=2.0  # COCO mAP
+# albumentations>=1.0.0
+thop  # FLOPs computation
